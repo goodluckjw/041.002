@@ -71,3 +71,7 @@ def parse_law_xml(xml_data, terms, unit):
                 html += highlight(content, terms)
             results.append(html)
     return results
+
+def filter_by_logic(parsed_laws, query, unit):
+    terms = [t.strip() for t in re.split(r"[,&\-()]", query or "") if t.strip()]
+    return parse_law_xml(parsed_laws, terms, unit)
