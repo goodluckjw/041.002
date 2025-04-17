@@ -7,7 +7,6 @@ from utils import xml_parser
 from utils.api_handler import fetch_law_list_and_detail
 
 parse_law_xml = xml_parser.parse_law_xml
-filter_by_logic = xml_parser.filter_by_logic
 
 st.set_page_config(layout="wide")
 st.title("📘 부칙 개정 도우미")
